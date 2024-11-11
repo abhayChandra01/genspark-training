@@ -59,6 +59,17 @@ const books = [
 
 let cart = [];
 
+const saveCartToLocalStorage = () => {
+  localStorage.setItem("cart", JSON.stringify(cart));
+};
+
+const loadCartFromLocalStorage = () => {
+  const storedCart = localStorage.getItem("cart");
+  if (storedCart) {
+    cart = JSON.parse(storedCart);
+  }
+};
+
 const displayBooks = () => {
   const bookContainer = document.getElementById("bookContainer");
   bookContainer.innerHTML = "";
@@ -105,7 +116,6 @@ const updateCart = () => {
   const cartTotal = document.getElementById("cartTotal");
 
   cartCount.textContent = cart.reduce((acc, item) => acc + item.quantity, 0);
-
   cartItems.innerHTML = "";
 
   let totalPrice = 0;
@@ -116,22 +126,76 @@ const updateCart = () => {
     cartItem.className = "cart-item";
 
     const itemText = document.createElement("span");
-    itemText.textContent = `${item.title} x${item.quantity}`;
+    itemText.textContent = item.title;
     cartItem.appendChild(itemText);
 
-    const removeButton = document.createElement("button");
-    removeButton.textContent = "Remove";
-    removeButton.onclick = () => removeFromCart(item.id);
-    cartItem.appendChild(removeButton);
+    const controlContainer = document.createElement("div");
+    controlContainer.style.display = "flex";
+    controlContainer.style.alignItems = "center";
+    controlContainer.style.gap = "5px";
 
+    const decrementButton = document.createElement("button");
+    decrementButton.textContent = "-";
+    decrementButton.onclick = () => decrementQuantity(item.id);
+    controlContainer.appendChild(decrementButton);
+
+    const quantityDisplay = document.createElement("span");
+    quantityDisplay.textContent = ` ${item.quantity} `;
+    controlContainer.appendChild(quantityDisplay);
+
+    const incrementButton = document.createElement("button");
+    incrementButton.textContent = "+";
+    incrementButton.onclick = () => incrementQuantity(item.id);
+    controlContainer.appendChild(incrementButton);
+
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "🗑️";
+    deleteButton.onclick = () => removeFromCart(item.id);
+    deleteButton.style.background = "none";
+    deleteButton.style.border = "none";
+    deleteButton.style.cursor = "pointer";
+    deleteButton.style.fontSize = "16px";
+    deleteButton.style.width = "20px";
+    deleteButton.style.display = "flex";
+    deleteButton.style.justifyContent = "center";
+    deleteButton.style.alignItems = "center";
+    controlContainer.appendChild(deleteButton);
+
+    cartItem.appendChild(controlContainer);
     cartItems.appendChild(cartItem);
   });
 
   cartTotal.textContent = totalPrice.toFixed(2);
+  saveCartToLocalStorage();
+};
+
+const incrementQuantity = (bookId) => {
+  const book = cart.find((item) => item.id === bookId);
+  if (book) {
+    book.quantity++;
+    updateCart();
+  }
+};
+
+const decrementQuantity = (bookId) => {
+  const book = cart.find((item) => item.id === bookId);
+  if (book) {
+    if (book.quantity > 1) {
+      book.quantity--;
+    } else {
+      cart = cart.filter((item) => item.id !== bookId);
+    }
+    updateCart();
+  }
 };
 
 const removeFromCart = (bookId) => {
   cart = cart.filter((item) => item.id !== bookId);
+  updateCart();
+};
+
+const emptyCart = () => {
+  cart = [];
   updateCart();
 };
 
@@ -141,4 +205,8 @@ document.getElementById("cartButton").addEventListener("click", () => {
     cartPopover.style.display === "block" ? "none" : "block";
 });
 
+document.getElementById("emptyCartButton").addEventListener("click", emptyCart);
+
+loadCartFromLocalStorage();
 displayBooks();
+updateCart();
