@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library World</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Library World</h1>
+    </header>
+    <div class="container">
+      <div class="leftWrapper">
+        <div class="card">
+          <h2>Create User/Member</h2>
+          <input type="text" id="create-user-name" placeholder="User Name" />
+          <input
+            type="text"
+            id="create-member-id"
+            placeholder="Member ID (optional)"
+          />
+          <button onclick="createUser()">Create User/Member</button>
+        </div>
+
+        <div class="card">
+          <h2>Add Book</h2>
+          <input type="text" id="book-name" placeholder="Book Name" />
+          <input type="text" id="book-author" placeholder="Book Author" />
+          <button onclick="addBook()">Add Book</button>
+        </div>
+
+        <div class="card">
+          <h2>Borrow Book</h2>
+          <select id="borrow-user-dropdown"></select>
+          <select id="borrow-book-dropdown"></select>
+          <button onclick="borrowBook()">Borrow Book</button>
+        </div>
+
+        <div class="card">
+          <h2>Return Book</h2>
+          <select id="return-user-dropdown"></select>
+          <select id="return-book-dropdown"></select>
+          <button onclick="returnBook()">Return Book</button>
+        </div>
+      </div>
+      <div class="rightWrapper">
+        <div class="card">
+          <h2>Available Books</h2>
+          <ul id="available-books-list"></ul>
+        </div>
+
+        <div class="card">
+          <h2>Borrowed Books</h2>
+          <ul id="borrowed-books-list"></ul>
+        </div>
+
+        <div class="card">
+          <h2>Active Users</h2>
+          <ul id="active-users-list"></ul>
+        </div>
+      </div>
+
+      <div id="custom-alert" class="custom-alert">
+        <p id="alert-message"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
