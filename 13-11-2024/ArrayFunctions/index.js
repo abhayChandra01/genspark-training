@@ -83,9 +83,3 @@ var sortedObjects = __spreadArray([], objectArray, true).sort(function (a, b) {
     return a.name.localeCompare(b.name);
 });
 console.log("After SORT (by name) on objectArray:", sortedObjects);
-// FIND
-var firstEven = objectArray.find(function (item) { return item.id === 2; });
-console.log("After FIND (first even) on numberArray:", firstEven);
-// INCLUDES
-// const hasFour = numberArray.includes(4);
-// console.log("After INCLUDES (check if 4 exists) on numberArray:", hasFour);
