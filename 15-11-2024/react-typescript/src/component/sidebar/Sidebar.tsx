@@ -21,6 +21,11 @@ const Sidebar: React.FC = () => {
             To-Do List
           </Link>
         </li>
+        <li>
+          <Link to="/customer-details" className="hover:text-gray-300">
+            Customer Details
+          </Link>
+        </li>
       </ul>
     </div>
   );
