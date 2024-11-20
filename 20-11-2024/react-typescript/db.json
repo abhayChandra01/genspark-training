@@ -1,0 +1,8 @@
+{
+  "users": [
+    { "id": 1, "name": "Abhay Dev" },
+    { "id": 2, "name": "Narasimha Rao" },
+    { "id": 3, "name": "Aviral" },
+    { "id": 4, "name": "Sameer" }
+  ]
+}
