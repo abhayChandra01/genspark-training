@@ -1,0 +1,58 @@
+{
+  "users": [
+    {
+      "id": "dce7",
+      "name": "Abhay",
+      "email": "abhay@dev.com",
+      "password": "12345"
+    },
+    {
+      "id": "3ef5",
+      "name": "New Admin",
+      "email": "newadmin@gmail.com",
+      "password": "12345"
+    }
+  ],
+  "customers": [
+    {
+      "id": "89ff",
+      "customerId": "1234",
+      "name": "Abhay",
+      "city": "BLR",
+      "contactNumber": "9898989898",
+      "year": 2024,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRooEnD32-UtBw55GBfDTxxUZApMhWWnRaoLw&s",
+      "totalPurchasesPerYear": "20000"
+    },
+    {
+      "id": "a654",
+      "customerId": "12999",
+      "name": "NewUser",
+      "city": "NewCity",
+      "contactNumber": "9898233312",
+      "year": 2024,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRooEnD32-UtBw55GBfDTxxUZApMhWWnRaoLw&s",
+      "totalPurchasesPerYear": "95555"
+    },
+    {
+      "id": "6d14",
+      "customerId": "1234",
+      "name": "NewCustomer",
+      "city": "BLY",
+      "contactNumber": "9090909090",
+      "year": 2024,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVA_HrQLjkHiJ2Ag5RGuwbFeDKRLfldnDasw&s",
+      "totalPurchasesPerYear": "10000"
+    },
+    {
+      "customerId": "4587",
+      "name": "Alex01",
+      "city": "Mumbai",
+      "contactNumber": "6565656565",
+      "year": 2024,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVA_HrQLjkHiJ2Ag5RGuwbFeDKRLfldnDasw&s",
+      "totalPurchasesPerYear": "50000",
+      "id": "e5ad"
+    }
+  ]
+}
