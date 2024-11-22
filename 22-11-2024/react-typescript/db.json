@@ -1,0 +1,135 @@
+{
+  "users": [
+    {
+      "id": "dce7",
+      "name": "Abhay",
+      "email": "abhay@admin.com",
+      "password": "12345",
+      "role": "ADMIN"
+    },
+    {
+      "id": "3ef5",
+      "name": "Normal User",
+      "email": "user@gmail.com",
+      "password": "12345",
+      "role": "USER"
+    }
+  ],
+  "employees": [
+    {
+      "id": "1",
+      "name": "Employee 1",
+      "role": "Manager",
+      "email": "employee1@company.com",
+      "department": "HR",
+      "joiningDate": "2020-01-15"
+    },
+    {
+      "id": "2",
+      "name": "Employee 2",
+      "role": "Developer",
+      "email": "employee2@company.com",
+      "department": "IT",
+      "joiningDate": "2019-03-22"
+    },
+    {
+      "id": "3",
+      "name": "Employee 3",
+      "role": "Developer",
+      "email": "employee3@company.com",
+      "department": "IT",
+      "joiningDate": "2021-04-30"
+    },
+    {
+      "id": "4",
+      "name": "Employee 4",
+      "role": "Designer",
+      "email": "employee4@company.com",
+      "department": "HR",
+      "joiningDate": "2022-05-12"
+    },
+    {
+      "id": "5",
+      "name": "Employee 5",
+      "role": "Tester",
+      "email": "employee5@company.com",
+      "department": "HR",
+      "joiningDate": "2021-07-19"
+    },
+    {
+      "id": "6",
+      "name": "Employee 6",
+      "role": "Manager",
+      "email": "employee6@company.com",
+      "department": "IT",
+      "joiningDate": "2020-02-11"
+    },
+    {
+      "id": "7",
+      "name": "Employee 7",
+      "role": "HR Specialist",
+      "email": "employee7@company.com",
+      "department": "HR",
+      "joiningDate": "2022-08-01"
+    },
+    {
+      "id": "8",
+      "name": "Employee 8",
+      "role": "Developer",
+      "email": "employee8@company.com",
+      "department": "IT",
+      "joiningDate": "2023-09-10"
+    },
+    {
+      "id": "9",
+      "name": "Employee 9",
+      "role": "Developer",
+      "email": "employee9@company.com",
+      "department": "IT",
+      "joiningDate": "2023-09-10"
+    },
+    {
+      "id": "10",
+      "name": "Employee 10",
+      "role": "Developer",
+      "email": "employee10@company.com",
+      "department": "IT",
+      "joiningDate": "2023-09-10"
+    },
+    {
+      "id": "11",
+      "name": "Employee 11",
+      "role": "Developer",
+      "email": "employee11@company.com",
+      "department": "IT",
+      "joiningDate": "2023-09-10"
+    },
+    {
+      "id": "12",
+      "name": "Employee 12",
+      "role": "Developer",
+      "email": "employee12@company.com",
+      "department": "IT",
+      "joiningDate": "2023-09-10"
+    }
+  ],
+  "total_employees": [
+    {
+      "total_employees": 12
+    }
+  ],
+  "departments": [
+    {
+      "id": "1",
+      "name": "HR",
+      "manager": "Some Manager",
+      "employeeCount": 5
+    },
+    {
+      "id": "2",
+      "name": "IT",
+      "manager": "Some Other Manager",
+      "employeeCount": 8
+    }
+  ]
+}
