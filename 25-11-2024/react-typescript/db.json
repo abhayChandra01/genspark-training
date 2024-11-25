@@ -1,0 +1,32 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Abhay",
+      "role": "Developer",
+      "department": "IT"
+    },
+    {
+      "id": 2,
+      "name": "Aviral",
+      "role": "Developer",
+      "department": "IT"
+    },
+    {
+      "id": 2,
+      "name": "Sameer",
+      "role": "Developer",
+      "department": "IT"
+    }
+  ],
+  "vehicles": [
+    {
+      "id": 1,
+      "ownerName": "Abhay",
+      "contactNumber": "1234567890",
+      "vehicleModel": "McLaren Artura",
+      "registrationNumber": "TS09EA1234",
+      "vehicleColor": "Red"
+    }
+  ]
+}
