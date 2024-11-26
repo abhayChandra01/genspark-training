@@ -1,10 +1,7 @@
 import React, { useState } from "react";
-// import { useNavigate } from "react-router-dom";
-// import { loginUser } from "../../services/UserService";
 import toast from "react-hot-toast";
 
 const Login: React.FC = () => {
-  // const navigate = useNavigate();
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [error, setError] = useState<string>("");
@@ -25,10 +22,8 @@ const Login: React.FC = () => {
     try {
       const user = email === "abhay@admin.com" && password === "12345";
       if (user) {
-        // localStorage.setItem("auth_user_token", JSON.stringify(user));
         toast.success("Logged in successfully!");
         window.location.href = "./products";
-        // navigate("/products");
       } else {
         setError("Invalid email or password.");
       }
